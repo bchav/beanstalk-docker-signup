@@ -1,0 +1,70 @@
+{
+  "AWSEBDockerrunVersion": 2,
+  "containerDefinitions": [
+    {
+      "name": "signup",
+      "image": "your_container_image_location",
+      "environment": [],
+      "essential": true,
+      "memory": 200,
+      "mountPoints": [],
+      "portMappings": [],
+      "links": null,
+      "volumesFrom": [],
+      "extraHosts": null,
+      "dnsServers": null,
+      "disableNetworking": null,
+      "dnsSearchDomains": null,
+      "hostname": null,
+      "entryPoint": null,
+      "ulimits": null,
+      "dockerSecurityOptions": null,
+      "workingDirectory": null,
+      "readonlyRootFilesystem": null,
+      "command": null,
+      "user": null,
+      "dockerLabels": null,
+      "logConfiguration": null,
+      "cpu": 1,
+      "privileged": null,
+      "memoryReservation": null
+    },
+    {
+      "name": "nginx",
+      "image": "chavisb/nginx-proxy",
+      "environment": [],
+      "essential": true,
+      "memory": 200,
+      "mountPoints": [],
+      "portMappings": [
+        {
+          "hostPort": 80,
+          "containerPort": 80,
+          "protocol": "tcp"
+        }
+      ],
+      "links": [
+        "signup"
+      ],
+      "volumesFrom": [],
+      "extraHosts": null,
+      "dnsServers": null,
+      "disableNetworking": null,
+      "dnsSearchDomains": null,
+      "hostname": null,
+      "entryPoint": null,
+      "ulimits": null,
+      "dockerSecurityOptions": null,
+      "workingDirectory": null,
+      "readonlyRootFilesystem": null,
+      "command": null,
+      "user": null,
+      "dockerLabels": null,
+      "logConfiguration": null,
+      "cpu": 1,
+      "privileged": null,
+      "memoryReservation": null
+    }
+  ],
+  "volumes": []
+}
