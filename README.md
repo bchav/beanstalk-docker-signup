@@ -1,6 +1,6 @@
 # Beanstalk Docker demo repo
 
-Source files for spinning up a Docker application on AWS Elastic Beanstalk.
+Source files for spinning up a Docker application on AWS Elastic Beanstalk, based on https://github.com/awslabs/eb-py-flask-signup
 
 The application is a "Sign Up" application for "A New Startup". The application inserts names and email addresses into Redis.
 
