@@ -1,10 +1,10 @@
 # Beanstalk Docker demo repo
 
-Source files for spinning up a basic docker application on beanstalk.
+Source files for spinning up a Docker application on AWS Elastic Beanstalk.
 
-The application is a "signup" application that inserts values into Redis.
+The application is a "Sign Up" application for "A New Startup". The application inserts names and email addresses into Redis.
 
-The demo uses an Nginx transparent reverse proxy container linked to the app.py container.
+The architecture is an Nginx container acting as a transpartent reverse proxy. It is linked to the app.py container using the "links" parameter in the Dockerrun.aws.json file. The Nginx source repo is here: https://github.com/bchav/nginx-proxy
 
 To get this up and running:
 
